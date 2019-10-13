@@ -7,6 +7,7 @@ import java.util.*;
  * @author lalo
  */
 public class Auto {
+    //el mankor se la come
     private String codigoUnico;
     private int year;
     private String type;
