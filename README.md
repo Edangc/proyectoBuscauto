@@ -1,5 +1,7 @@
 # BuscAuto Project
 
+[![Join the chat at https://gitter.im/iluwatar/java-design-patterns](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/buscAuto/community#)
+
 This repository is about an university project to build an program where we are looking to simplify the search for the dreamed car of the user, apliying a personalized search with a variety of parameters. We recently introduced ourselves into java language, so we expect to learn more with this project and gain more experience.
 
 ## Functions of the app
