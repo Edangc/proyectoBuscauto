@@ -4,7 +4,7 @@ This repository is about an university project to build an program where we are 
 
 ## Functions of the app
 
-Now that we are programming in java, we can implement a GUI to make the user experience more comfortable. Using it like a base, the program is gonna use an account system, so we can separate each user that use the app.
+Now that we are programming in java, we can implement a GUI to make the user experience more comfortable. Using it like a base, the program is going to use an account system, so we can separate each user that use the app.
 
 Each user in the program is going to have:
 
