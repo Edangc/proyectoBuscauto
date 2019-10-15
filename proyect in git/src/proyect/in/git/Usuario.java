@@ -15,26 +15,24 @@ public class Usuario {
     private boolean admin;
     private String name;
     private String password;
-    private ArrayList<Auto> FavList;
+    private ListaFavoritos listaFavoritos;
 
-    public Usuario(boolean admin, String name, String password, ArrayList<Auto> FavList) {
+    public Usuario(boolean admin, String name, String password, ListaFavoritos listaFavoritos) {
         this.admin = admin;
         this.name = name;
         this.password = password;
-        this.FavList = FavList;
-    }
-
-
-    
-    
-    public void agregarAutoAFavoritos(){
-            
+        this.listaFavoritos = listaFavoritos;
     }
     
+    public void crearUsuario(){       
+    }
+    public void eliminarUsuario(){
+    }
     public void eliminarAutoDeFavoritos(){
-        
+    }   
+    public ArrayList<Auto> miListaFavoritos(){
+        return null;
     }
-    
     
     
 }
