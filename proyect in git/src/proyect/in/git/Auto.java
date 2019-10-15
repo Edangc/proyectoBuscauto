@@ -7,8 +7,6 @@ import java.util.*;
  * @author lalo
  */
 public class Auto {
-    //Wena
-    //LALO BRANCH
     private String codigoUnico;
     private int year;
     private String type;
@@ -20,7 +18,6 @@ public class Auto {
     private String transmision;
     private long precioP;    //precio patente (permiso de circulación)
     private long precioV;   //precio vehiculo
-    private ArrayList listaConcesionarios;
 
     public Auto() {
     }
@@ -113,16 +110,4 @@ public class Auto {
         this.precioV = precioV;
     }
 
-    public ArrayList getListaConcesionarios() {
-        return listaConcesionarios;
-    }
-
-    public void setListaConcesionarios(ArrayList listaConcesionarios) {
-        this.listaConcesionarios = listaConcesionarios;
-    }
-    
-    public void deleteListaConcesionarios(){
-            
-    }    
-    
 }
