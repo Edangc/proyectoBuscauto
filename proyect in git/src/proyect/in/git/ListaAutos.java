@@ -1,6 +1,9 @@
 
 package proyect.in.git;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeMap;
@@ -28,5 +31,13 @@ public class ListaAutos {
     
     public void cargarDatos(){
         //push arrayList & mapas
+        try{
+        BufferedReader br =new BufferedReader(new FileReader( ));
+        String line = br.readLine();
+        }catch(IOException ex){
+            System.out.println("Error: Archivo no encontrado");
+        }
+        
+        
     }
 }
