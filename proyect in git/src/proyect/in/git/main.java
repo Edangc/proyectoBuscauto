@@ -10,8 +10,7 @@ import java.util.*;
 public class main {
     
     public static void main(String[] args) throws IOException {
-        ListaAutos hola = new ListaAutos();
-        hola.cargarDatos();
+        ListaDeUsuarios oli = new ListaDeUsuarios();
     }
     
 }
