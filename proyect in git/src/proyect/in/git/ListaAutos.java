@@ -20,4 +20,13 @@ public class ListaAutos {
     private TreeMap<String,Auto> treeMapYear;
     private TreeMap<String,Auto> treeMapPrecioPatente;
     private TreeMap<String,Auto> treeMapPrecioVehiculo;
+    
+
+    public void agregarAuto(){
+        
+    }
+    
+    public void cargarDatos(){
+        //push arrayList & mapas
+    }
 }
