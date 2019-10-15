@@ -1,14 +1,8 @@
 
 package proyect.in.git;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.TreeMap;
+import java.io.*;
+import java.util.*;
 
 /**
  *
@@ -31,24 +25,33 @@ public class ListaAutos {
         
     }
     
-    public void cargarDatos(){
+    public void cargarDatos() throws IOException{
         //push arrayList & mapas
-        BufferedReader bufferedLectura = null;
+        String lineaArchivo;
+        int i = 1;
         try{
-        bufferedLectura = new BufferedReader(new FileReader("basededatos.csv")); 
-        
-        String linea = bufferedLectura.readLine();
-        
-        while(linea != null){
-            String[] campos = linea.split(";");
-            
-            linea = bufferedLectura.readLine();
+            File archivo = new File("/home/nearlz/NetBeansProjects/proyectoBuscauto/proyect in git/src/proyect/in/git/basededatos.csv");
+            BufferedReader bufferedLectura = new BufferedReader(new FileReader(archivo));
+            while((lineaArchivo = bufferedLectura.readLine()) != null){
+                Auto auto = new Auto();
+                auto.setCodigoUnico(lineaArchivo.split(";")[0]);
+                auto.setYear(Integer.parseInt(lineaArchivo.split(";")[1]));
+                auto.setType(lineaArchivo.split(";")[2]);
+                auto.setMarca(lineaArchivo.split(";")[3]);
+                auto.setModelo(lineaArchivo.split(";")[4]);
+                auto.setVersion(lineaArchivo.split(";")[5]);
+                auto.setPuertas(Integer.parseInt(lineaArchivo.split(";")[6]));
+                auto.setCombustible(lineaArchivo.split(";")[7]);
+                auto.setTransmision(lineaArchivo.split(";")[8]);
+                auto.setPrecioPatente(Integer.parseInt(lineaArchivo.split(";")[9]));
+                auto.setTasacionFiscal(Integer.parseInt(lineaArchivo.split(";")[10]));
+                System.out.println(i+".-"+auto.getMarca()+" "+auto.getModelo()+" "+auto.getYear());
+                i++;
         }
         
-        }catch(IOException ex){
-            System.out.println("Error: Archivo no encontrado");
+        }catch(FileNotFoundException e){
+            System.out.println("te echaste el ramo");
         }
-        
         
     }
 }
