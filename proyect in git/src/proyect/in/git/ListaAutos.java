@@ -2,8 +2,10 @@
 package proyect.in.git;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeMap;
@@ -31,9 +33,18 @@ public class ListaAutos {
     
     public void cargarDatos(){
         //push arrayList & mapas
+        BufferedReader bufferedLectura = null;
         try{
-        BufferedReader br =new BufferedReader(new FileReader( ));
-        String line = br.readLine();
+        bufferedLectura = new BufferedReader(new FileReader("basededatos.csv")); 
+        
+        String linea = bufferedLectura.readLine();
+        
+        while(linea != null){
+            String[] campos = linea.split(";");
+            
+            linea = bufferedLectura.readLine();
+        }
+        
         }catch(IOException ex){
             System.out.println("Error: Archivo no encontrado");
         }
