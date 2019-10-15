@@ -24,13 +24,16 @@ public class ListaAutos {
     public void agregarAuto(){
         
     }
+    public void quitarAuto(){
+         
+    }
     
     public void cargarDatos() throws IOException{
         //push arrayList & mapas
         String lineaArchivo;
         int i = 1;
         try{
-            File archivo = new File("/home/nearlz/NetBeansProjects/proyectoBuscauto/proyect in git/src/proyect/in/git/basededatos.csv");
+            File archivo = new File("basededatos.csv");
             BufferedReader bufferedLectura = new BufferedReader(new FileReader(archivo));
             while((lineaArchivo = bufferedLectura.readLine()) != null){
                 Auto auto = new Auto();
