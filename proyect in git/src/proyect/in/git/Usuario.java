@@ -23,15 +23,53 @@ public class Usuario {
         this.password = password;
         this.listaFavoritos = listaFavoritos;
     }
-    
-    public void crearUsuario(){       
+    public Usuario(boolean admin, String name, String password) {
+        this.admin = admin;
+        this.name = name;
+        this.password = password;
     }
+
+    public Usuario() {
+    }
+
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    /**
+     * @since 1.0
+     * 
+    */
     public void eliminarUsuario(){
+        this.admin = false;
+        this.listaFavoritos = null;
+        this.name = null;
+        this.password = null;
     }
     public void eliminarAutoDeFavoritos(){
     }   
-    public ArrayList<Auto> miListaFavoritos(){
-        return null;
+    public ListaFavoritos getListaFavoritos() {
+        return this.listaFavoritos;
     }
     
     
