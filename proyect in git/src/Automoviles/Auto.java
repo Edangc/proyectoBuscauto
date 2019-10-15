@@ -1,4 +1,4 @@
-package proyect.in.git;
+package Automoviles;
 
 import java.util.*;
 
@@ -18,7 +18,7 @@ public class Auto {
     private String transmision;
     private long precioPatente;    //precio patente (permiso de circulación)
     private long tasacionFiscal;   //precio vehiculo
-
+    
     public Auto() {
     }
 
