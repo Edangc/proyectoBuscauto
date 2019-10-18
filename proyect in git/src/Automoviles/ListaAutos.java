@@ -25,8 +25,10 @@ public class ListaAutos {
     public void agregarAuto(){
         
     }
-    public void quitarAuto(){
-         
+    public void quitarAuto(String marca,String modelo,String year,String version){
+        for(Auto it : listaAuto){
+            
+        }
     }
     
     public void cargarDatos() throws IOException{
@@ -34,7 +36,7 @@ public class ListaAutos {
         String lineaArchivo;
         int i = 1;
         try{
-            File archivo = new File("basededatos.csv");
+            File archivo = new File("proyectoBuscauto\\proyect in git\\src\\Automoviles\\basededatos.csv");
             BufferedReader bufferedLectura = new BufferedReader(new FileReader(archivo));
             while((lineaArchivo = bufferedLectura.readLine()) != null){
                 Auto auto = new Auto();

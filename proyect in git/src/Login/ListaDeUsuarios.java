@@ -3,29 +3,30 @@ package Login;
 
 import Automoviles.Auto;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
  * @author lalo
  */
 public class ListaDeUsuarios {
-    private ArrayList<Usuario> listaUsuarios;
-
-    public ListaDeUsuarios(ArrayList<Usuario> listaUsuarios) {
-        this.listaUsuarios = listaUsuarios;
-    }
+    private HashMap<String,Usuario> mapaUsuarios;
     
-    public void agregarUsuario(String name, String pw, boolean admin){//se encarga Usuario
-        for(Usuario user : listaUsuarios){
-            if( user.getName().equals(name) == true ){
-            return;
-            }
-        }
-        Usuario newUser = new Usuario(admin,name,pw);       
-        this.listaUsuarios.add(newUser);
+    public boolean validador(String nameUser){ //si el nombre de usuario ya existe retorna true
+    Usuario usuario = (Usuario) mapaUsuarios.get(nameUser);
+    if(usuario == null){
+        return false;
+    }
+    else{
+        return true;
+    }
+    }    
+    public boolean agregarUsuario(String name, String pw, boolean admin){//si se agrega con exito retorna true
+        if (validador(name)) return false;
+        
+        return true;
     }
     public void eliminarUsuario(String name){//se encarga Usuario
-        this.listaUsuarios.remove(buscarUsuario(name));
     }
 
     public ListaDeUsuarios() {
@@ -43,24 +44,9 @@ public class ListaDeUsuarios {
      * @return user
      */
     public Usuario buscarUsuario(String name){
-        Usuario usuario = new Usuario();
-        for(Usuario user : this.listaUsuarios){
-            if(user.getName().equals(name)){
-                return user;
-            }
-        }
-        return null;
+        
     }
-    
-    public Usuario buscarUsuario(String name, String password){
-        Usuario usuario = new Usuario();
-        for(Usuario user : this.listaUsuarios){
-            if(user.getName().equals(name) && user.getName().equals(password)){
-                return user;
-            }
-        }
-        return null;
-    }
+
     
     public ArrayList<Auto> buscarListaFavoritosDeUsuario(){
         return null;
