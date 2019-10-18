@@ -44,6 +44,7 @@ public class ListaDeUsuarios {
      * @return user
      */
     public Usuario buscarUsuario(String name){
+        return null;
         
     }
 
