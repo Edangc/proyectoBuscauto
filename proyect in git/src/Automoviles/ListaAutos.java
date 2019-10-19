@@ -36,7 +36,7 @@ public class ListaAutos {
         String lineaArchivo;
         int i = 1;
         try{
-            File archivo = new File("proyectoBuscauto\\proyect in git\\src\\Automoviles\\basededatos.csv");
+            File archivo = new File("src\\Automoviles\\basededatos.csv");
             BufferedReader bufferedLectura = new BufferedReader(new FileReader(archivo));
             while((lineaArchivo = bufferedLectura.readLine()) != null){
                 Auto auto = new Auto();
