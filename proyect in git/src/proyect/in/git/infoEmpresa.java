@@ -5,13 +5,15 @@ import Login.ListaDeUsuarios;
 import Automoviles.ListaAutos;
 import java.io.*;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Lalo
  */
 public class infoEmpresa {
-    private final ListaAutos listaAutos;
+    private ListaAutos listaAutos;
     private final ListaDeUsuarios listaUsuarios;
 
     public infoEmpresa(/*ListaAutos listaAutos, ListaDeUsuarios listaUsuarios*/) {
@@ -41,10 +43,22 @@ public class infoEmpresa {
     
     public void cargarDatos(){
         
+        try {
+            this.listaAutos.cargarDatos();
+        } catch (IOException ex) {
+            Logger.getLogger(infoEmpresa.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }    
 
 
     public boolean validador(String f){
         return true;
+    }
+    
+    public void mostrarPorMarca(String clave){
+    
+        this.listaAutos.mostrarPorMarca(clave);
+    
     }
 }

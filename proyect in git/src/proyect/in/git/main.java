@@ -15,8 +15,11 @@ import InterfazGrafica.*;
 public class main{
     
     public static void main(String[] args) throws IOException {
-        ListaAutos wena = new ListaAutos();
-        wena.cargarDatos();
+        infoEmpresa BuscAuto = new infoEmpresa();
+        BuscAuto.cargarDatos();
+        //BuscAuto.mostrarPorMarca("NISSAN");
+        
+        
         ListaDeUsuarios oli = new ListaDeUsuarios();
         InterfazGrafica.Owo.main(args);
     }

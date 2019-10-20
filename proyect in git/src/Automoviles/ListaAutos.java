@@ -31,6 +31,18 @@ public class ListaAutos {
         }
     }
     
+    public void mostrarPorMarca(String clave){
+    
+        ArrayList deMarca = this.mapMarca.get(clave);
+        for(int i = 0; i<deMarca.size();i++){
+            Auto pos = (Auto)deMarca.get(i);
+            System.out.println((i+1)+".-"+pos.getMarca());
+            
+            
+        }
+    
+    }
+    
     public void cargarDatos() throws IOException{
         //push arrayList & mapas
         String lineaArchivo;
@@ -88,6 +100,36 @@ public class ListaAutos {
                     mapCodigoUnico.putIfAbsent(auto.getCodigoUnico(), nueva);
                 }else{
                     ArrayList posicion = (ArrayList)mapCodigoUnico.get(auto.getCodigoUnico());
+                    posicion.add(auto);
+                }
+                
+                //Year
+                if(treeMapYear.getOrDefault(auto.getYear(), null)==null){
+                    ArrayList nueva = new ArrayList();
+                    nueva.add(auto);
+                    treeMapYear.putIfAbsent(auto.getYear(), nueva);
+                }else{
+                    ArrayList posicion = (ArrayList)treeMapYear.get(auto.getYear());
+                    posicion.add(auto);
+                }
+                
+                //precio patente
+                if(treeMapPrecioPatente.getOrDefault(auto.getPrecioPatente(), null)==null){
+                    ArrayList nueva = new ArrayList();
+                    nueva.add(auto);
+                    treeMapPrecioPatente.putIfAbsent(auto.getPrecioPatente(), nueva);
+                }else{
+                    ArrayList posicion = (ArrayList)treeMapPrecioPatente.get(auto.getPrecioPatente());
+                    posicion.add(auto);
+                }
+                
+                //precio tasacion fiscal
+                if(treeMapTasacion.getOrDefault(auto.getTasacionFiscal(), null)==null){
+                    ArrayList nueva = new ArrayList();
+                    nueva.add(auto);
+                    treeMapTasacion.putIfAbsent(auto.getTasacionFiscal(), nueva);
+                }else{
+                    ArrayList posicion = (ArrayList)treeMapTasacion.get(auto.getTasacionFiscal());
                     posicion.add(auto);
                 }
         }
