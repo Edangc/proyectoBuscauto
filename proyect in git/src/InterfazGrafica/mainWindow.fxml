@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="1054.0" style="-fx-background-color: #2980b9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="677.0" layoutY="33.0" prefHeight="448.0" prefWidth="309.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Text layoutX="40.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Año:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ComboBox layoutX="82.0" layoutY="42.0" prefHeight="25.0" prefWidth="72.0" promptText="Min" />
+            <ComboBox layoutX="162.0" layoutY="42.0" prefHeight="25.0" prefWidth="72.0" promptText="Max" />
+            <ComboBox layoutX="40.0" layoutY="87.0" prefHeight="25.0" prefWidth="225.0" promptText="Tipo" />
+            <ComboBox layoutX="40.0" layoutY="123.0" prefHeight="25.0" prefWidth="225.0" promptText="Marca" />
+            <ComboBox layoutX="40.0" layoutY="163.0" prefHeight="25.0" prefWidth="225.0" promptText="Modelo" />
+            <TextField layoutX="40.0" layoutY="200.0" prefHeight="25.0" prefWidth="225.0" promptText="Version" />
+            <Text layoutX="33.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ComboBox layoutX="82.0" layoutY="233.0" prefHeight="25.0" prefWidth="72.0" promptText="Min" />
+            <ComboBox layoutX="162.0" layoutY="233.0" prefHeight="25.0" prefWidth="72.0" promptText="Max" />
+            <ComboBox layoutX="40.0" layoutY="270.0" prefHeight="25.0" prefWidth="225.0" promptText="Combustible" />
+            <ComboBox layoutX="40.0" layoutY="308.0" prefHeight="25.0" prefWidth="225.0" promptText="Transmisión" />
+            <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="131.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="Imagenes/ImagenBuscador.png" />
+                </image>
+            </ImageView>
+            
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="91.0" layoutY="61.0" prefHeight="409.0" prefWidth="487.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="107.0" fitWidth="92.0" layoutX="25.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="Imagenes/ImagenUsuario.jpg" />
+                </image>
+            </ImageView>
+            <Text layoutX="138.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mankor Toro">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="32.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Favorito:">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="28.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca Favorita:">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="27.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autos Favoritos">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      
+   </children>
+</AnchorPane>
