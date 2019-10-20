@@ -51,7 +51,7 @@ public class ListaAutos {
                 auto.setTransmision(lineaArchivo.split(";")[8]);
                 auto.setPrecioPatente(Integer.parseInt(lineaArchivo.split(";")[9]));
                 auto.setTasacionFiscal(Integer.parseInt(lineaArchivo.split(";")[10]));
-                System.out.println(i+".-"+auto.getMarca()+" "+auto.getModelo()+" "+auto.getYear());
+                //System.out.println(i+".-"+auto.getMarca()+" "+auto.getModelo()+" "+auto.getYear());
                 i++;
         }
         
