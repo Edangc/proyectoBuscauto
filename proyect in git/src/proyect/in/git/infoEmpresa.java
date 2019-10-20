@@ -43,11 +43,11 @@ public class infoEmpresa {
     
     public void cargarDatos(){
         
-        try {
+        /*try {
             this.listaAutos.cargarDatos();
         } catch (IOException ex) {
             Logger.getLogger(infoEmpresa.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
 
     }    
 

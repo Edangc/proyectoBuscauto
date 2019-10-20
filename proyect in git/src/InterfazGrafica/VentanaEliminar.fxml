@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfazGrafica.VentanaEliminarControlador">
+   <children>
+      <Label layoutX="75.0" layoutY="24.0" text="Eliminar automovil">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="year" layoutX="76.0" layoutY="93.0" promptText="Año" />
+      <TextField fx:id="tipo" layoutX="76.0" layoutY="119.0" promptText="Tipo" />
+      <TextField fx:id="marca" layoutX="76.0" layoutY="145.0" promptText="Marca" />
+      <TextField fx:id="modelo" layoutX="76.0" layoutY="171.0" promptText="Modelo" />
+      <TextField fx:id="version" layoutX="76.0" layoutY="197.0" promptText="Version" />
+      <TextField fx:id="puertas" layoutX="75.0" layoutY="223.0" promptText="Puertas" />
+      <TextField fx:id="combustible" layoutX="75.0" layoutY="249.0" promptText="Combustible" />
+      <TextField fx:id="transmision" layoutX="76.0" layoutY="275.0" promptText="Transmisión" />
+      <TextField fx:id="precioPatente" layoutX="75.0" layoutY="301.0" promptText="Precio Patente" />
+      <TextField fx:id="tasacionFiscal" layoutX="75.0" layoutY="327.0" promptText="Tasación Fiscal" />
+      <Button layoutX="123.0" layoutY="353.0" mnemonicParsing="false" text="Eliminar" />
+      <Label fx:id="status" alignment="CENTER" layoutX="10.0" layoutY="390.0" prefHeight="20.0" prefWidth="278.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
