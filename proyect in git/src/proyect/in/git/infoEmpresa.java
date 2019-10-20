@@ -3,6 +3,8 @@ package proyect.in.git;
 
 import Login.ListaDeUsuarios;
 import Automoviles.ListaAutos;
+import java.io.*;
+import java.util.*;
 
 /**
  *
@@ -20,7 +22,8 @@ public class infoEmpresa {
     public void buscarAutos(){//se encarga ListaAutos
         
     }
-    public void crearUsuario(){//se encarga Usuario
+    public void crearUsuario(String name,String pw,boolean admin){//se encarga Usuario
+        boolean resultado = this.listaUsuarios.agregarUsuario(name,pw,admin);
     }
     public void eliminarUsuario(){//se encarga ListaDeUsuarios
         
