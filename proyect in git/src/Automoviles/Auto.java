@@ -120,7 +120,7 @@ public class Auto {
         this.precioPatente = precioPatente;
     }
 
-    public void setTasacionFiscal(String tasacionFiscal) {
+    public void setTasacionFiscal(String tasacifonFiscal) {
         this.tasacionFiscal = tasacionFiscal;
     }
 

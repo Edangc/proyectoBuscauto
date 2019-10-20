@@ -60,8 +60,7 @@ public class ListaAutos {
                 }else{
                     ArrayList posicion = (ArrayList)mapMarca.get(auto.getMarca());
                     posicion.add(auto);
-                }
-                
+                } 
                 //Modelo
                 if(mapModelo.getOrDefault(auto.getModelo(), null)==null){
                     ArrayList nueva = new ArrayList();

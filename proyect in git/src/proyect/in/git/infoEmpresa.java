@@ -14,23 +14,16 @@ public class infoEmpresa {
     private final ListaAutos listaAutos;
     private final ListaDeUsuarios listaUsuarios;
 
-    public infoEmpresa() {
-        this.listaAutos = new ListaAutos();
-        this.listaUsuarios = new ListaDeUsuarios();
+    public infoEmpresa(/*ListaAutos listaAutos, ListaDeUsuarios listaUsuarios*/) {
+        this.listaAutos = null/*listaAutos*/;
+        this.listaUsuarios = null/*listaUsuarios*/;
     }
-
-    
-
-    /*public infoEmpresa(ListaAutos listaAutos, ListaDeUsuarios listaUsuarios) {
-        this.listaAutos = listaAutos;
-        this.listaUsuarios = listaUsuarios;
-    }*/
     
     public void buscarAutos(){//se encarga ListaAutos
         
     }
     public void crearUsuario(String name,String pw,boolean admin){//se encarga Usuario
-        this.listaUsuarios.agregarUsuario(name,pw,admin);
+        //this.listaUsuarios.agregarUsuario(name,pw,admin);
     }
     public void eliminarUsuario(){//se encarga ListaDeUsuarios
         
@@ -49,7 +42,9 @@ public class infoEmpresa {
     public void cargarDatos(){
         
     }    
-    public boolean validador(String s){
+
+
+    public boolean validador(String f){
         return true;
     }
 }
