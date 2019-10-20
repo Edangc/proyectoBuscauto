@@ -23,7 +23,8 @@ public class ListaDeUsuarios {
     }    
     public boolean agregarUsuario(String name, String pw, boolean admin){//si se agrega con exito retorna true
         if (validador(name)) return false;
-        
+        Usuario nuevo = new Usuario(admin,name,pw);
+        this.mapaUsuarios.putIfAbsent(name, nuevo);
         return true;
     }
     public void eliminarUsuario(String name){//se encarga Usuario
