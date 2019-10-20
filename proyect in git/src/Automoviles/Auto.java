@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class Auto {
     private String codigoUnico;
-    private String year;
+    private int year;
     private String type;
     private String marca;
     private String modelo;
@@ -16,8 +16,8 @@ public class Auto {
     private int puertas;
     private String combustible;
     private String transmision;
-    private String precioPatente;    //precio patente (permiso de circulación)
-    private String tasacionFiscal;   //precio vehiculo
+    private long precioPatente;    //precio patente (permiso de circulación)
+    private long tasacionFiscal;   //precio vehiculo
     
     public Auto() {
     }

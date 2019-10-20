@@ -59,13 +59,13 @@ public class ListaAutos {
                     ArrayList listMarca = new ArrayList();
                     listMarca.add(auto);
                 }
-                mapMarca.put(auto.getMarca(), auto);
+                /*mapMarca.put(auto.getMarca(), auto);
                 mapTipo.put(auto.getType(), auto);
                 mapModelo.put(auto.getModelo(), auto);
                 mapCodigoUnico.put(auto.getCodigoUnico(), auto);
                 treeMapYear.put(auto.getYear(), auto);
                 treeMapPrecioPatente.put((int)auto.getPrecioPatente(), auto);
-                treeMapTasacion.put(auto.getTasacionFiscal(), auto);
+                treeMapTasacion.put(auto.getTasacionFiscal(), auto);*/
         }
         
         }catch(FileNotFoundException e){
