@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfazGrafica.VentanaAdminControlador">
+    <children>
+        <Button layoutX="35.0" layoutY="104.0" onAction="#abrirVentanaAgregar" prefHeight="25.0" prefWidth="147.0" text="Agregar Vehiculos" />
+      <Button layoutX="35.0" layoutY="143.0" mnemonicParsing="false" onAction="#abrirVentanaEliminar" prefHeight="25.0" prefWidth="147.0" text="Eliminar Vehiculos" />
+      <Button layoutX="35.0" layoutY="182.0" mnemonicParsing="false" onAction="#abrirVentanaModificar" prefHeight="25.0" prefWidth="147.0" text="Modificar Vehiculos" />
+      <Button layoutX="207.0" layoutY="106.0" mnemonicParsing="false" onAction="#IrMenuBusquedas" text="Ir al menu de busquedas" />
+      <Label layoutX="131.0" layoutY="38.0" prefHeight="17.0" prefWidth="123.0" text="Nombre Usuario">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button layoutX="207.0" layoutY="143.0" mnemonicParsing="false" onAction="#abrirVentanaCrearAdmin" prefHeight="25.0" prefWidth="147.0" text="Crear Cuenta Admin" />
+    </children>
+</AnchorPane>

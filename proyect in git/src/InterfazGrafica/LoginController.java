@@ -49,6 +49,14 @@ public class LoginController {
             stage.setScene(scene);
             stage.show();
             //new Owo().setInicioSesionStatus(true);
+        }else if(loginUserName.getText().equals("admin") && loginPassword.getText().equals("pass")){
+            Stage stage = new Stage();
+            ((Node)event.getSource()).getScene().getWindow().hide();
+            Parent root = FXMLLoader.load(getClass().getResource("VentanaAdmin.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+            //new Owo().setInicioSesionStatus(true);
         }else{
             inicioSesionStatus.setText("Nombre de usuario o contraseña incorrecto");
         }
