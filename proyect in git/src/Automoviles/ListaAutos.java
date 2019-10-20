@@ -65,7 +65,7 @@ public class ListaAutos {
                 mapCodigoUnico.put(auto.getCodigoUnico(), auto);
                 treeMapYear.put(auto.getYear(), auto);
                 treeMapPrecioPatente.put((int)auto.getPrecioPatente(), auto);
-                treeMapTasacion.put((auto.getTasacionFiscal(), auto);
+                treeMapTasacion.put(auto.getTasacionFiscal(), auto);
         }
         
         }catch(FileNotFoundException e){

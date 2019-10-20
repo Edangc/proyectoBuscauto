@@ -7,6 +7,7 @@ package InterfazGrafica;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -16,13 +17,25 @@ import javafx.stage.Stage;
  * @author Lalo
  */
 public class Owo extends Application {
-    
+
+    //private boolean inicioSesionStatus;
+    //private boolean registroStatus;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Ventana Sign In.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        /*while(true){
+            while(true){
+                if (registroStatus){
+                    break;
+                }
+            }
+            if (inicioSesionStatus){
+                break;
+            }
+        }*/
     }
 
     /**
@@ -31,5 +44,12 @@ public class Owo extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    
+    /*void setInicioSesionStatus(boolean f){
+        this.inicioSesionStatus=f;
+    }
+    void setRegistroStatus(boolean f){
+        this.registroStatus=f;
+    }*/
     
 }
