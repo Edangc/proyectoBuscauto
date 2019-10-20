@@ -73,7 +73,7 @@ public class LoginController {
     public void ConfirmarRegistro(ActionEvent event) throws IOException{
         if (registroPassword1.getText().equals(registroPassword2.getText())){
             registroStatus.setText("Registro completado");
-            new proyect.in.git.infoEmpresa().crearUsuario(false,registroUserName.getText(),registroPassword1.getText());
+            new proyect.in.git.infoEmpresa().crearUsuario(registroUserName.getText(),registroPassword1.getText(),false);
             //new Owo().setRegistroStatus(true);
             Stage stage = new Stage();
             ((Node)event.getSource()).getScene().getWindow().hide();

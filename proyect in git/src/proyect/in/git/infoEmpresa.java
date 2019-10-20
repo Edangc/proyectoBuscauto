@@ -14,10 +14,17 @@ public class infoEmpresa {
     private final ListaAutos listaAutos;
     private final ListaDeUsuarios listaUsuarios;
 
-    public infoEmpresa(ListaAutos listaAutos, ListaDeUsuarios listaUsuarios) {
+    public infoEmpresa() {
+        this.listaAutos = new ListaAutos();
+        this.listaUsuarios = new ListaDeUsuarios();
+    }
+
+    
+
+    /*public infoEmpresa(ListaAutos listaAutos, ListaDeUsuarios listaUsuarios) {
         this.listaAutos = listaAutos;
         this.listaUsuarios = listaUsuarios;
-    }
+    }*/
     
     public void buscarAutos(){//se encarga ListaAutos
         
@@ -42,5 +49,7 @@ public class infoEmpresa {
     public void cargarDatos(){
         
     }    
-       
+    public boolean validador(String s){
+        return true;
+    }
 }

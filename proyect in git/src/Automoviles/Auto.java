@@ -13,7 +13,7 @@ public class Auto {
     private String marca;
     private String modelo;
     private String version;
-    private int puertas;
+    private String puertas;
     private String combustible;
     private String transmision;
     private String precioPatente;    //precio patente (permiso de circulación)
@@ -22,7 +22,7 @@ public class Auto {
     public Auto() {
     }
 
-    public Auto(String codigoUnico, int year, String type, String marca, String modelo, String version, int puertas, String combustible, String transmision, long precioPatente, long tasacionFiscal) {
+    public Auto(String codigoUnico, String year, String type, String marca, String modelo, String version,String puertas, String combustible, String transmision,String precioPatente,String tasacionFiscal) {
         this.codigoUnico = codigoUnico;
         this.year = year;
         this.type = type;
@@ -40,7 +40,7 @@ public class Auto {
         return codigoUnico;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
@@ -60,7 +60,7 @@ public class Auto {
         return version;
     }
 
-    public int getPuertas() {
+    public String getPuertas() {
         return puertas;
     }
 
@@ -72,11 +72,11 @@ public class Auto {
         return transmision;
     }
 
-    public long getPrecioPatente() {
+    public String getPrecioPatente() {
         return precioPatente;
     }
 
-    public long getTasacionFiscal() {
+    public String getTasacionFiscal() {
         return tasacionFiscal;
     }
 
@@ -84,7 +84,7 @@ public class Auto {
         this.codigoUnico = codigoUnico;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
@@ -104,7 +104,7 @@ public class Auto {
         this.version = version;
     }
 
-    public void setPuertas(int puertas) {
+    public void setPuertas(String puertas) {
         this.puertas = puertas;
     }
 
@@ -116,11 +116,11 @@ public class Auto {
         this.transmision = transmision;
     }
 
-    public void setPrecioPatente(long precioPatente) {
+    public void setPrecioPatente(String precioPatente) {
         this.precioPatente = precioPatente;
     }
 
-    public void setTasacionFiscal(long tasacionFiscal) {
+    public void setTasacionFiscal(String tasacionFiscal) {
         this.tasacionFiscal = tasacionFiscal;
     }
 

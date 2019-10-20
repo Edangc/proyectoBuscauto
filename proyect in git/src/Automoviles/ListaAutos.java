@@ -37,37 +37,61 @@ public class ListaAutos {
         try{
             File archivo = new File("src\\Automoviles\\basededatos.csv");
             BufferedReader bufferedLectura = new BufferedReader(new FileReader(archivo));
-            
             while((lineaArchivo = bufferedLectura.readLine()) != null){
                 Auto auto = new Auto();
-                ArrayList<Auto> lista = new ArrayList();
                 
                 auto.setCodigoUnico(lineaArchivo.split(";")[0]);
-                auto.setYear(Integer.parseInt(lineaArchivo.split(";")[1]));
+                auto.setYear(lineaArchivo.split(";")[1]);
                 auto.setType(lineaArchivo.split(";")[2]);
                 auto.setMarca(lineaArchivo.split(";")[3]);
                 auto.setModelo(lineaArchivo.split(";")[4]);
                 auto.setVersion(lineaArchivo.split(";")[5]);
-                auto.setPuertas(Integer.parseInt(lineaArchivo.split(";")[6]));
+                auto.setPuertas((lineaArchivo.split(";")[6]));
                 auto.setCombustible(lineaArchivo.split(";")[7]);
                 auto.setTransmision(lineaArchivo.split(";")[8]);
-                auto.setPrecioPatente(Integer.parseInt(lineaArchivo.split(";")[9]));
-                auto.setTasacionFiscal(Integer.parseInt(lineaArchivo.split(";")[10]));
-                if(mapMarca.get(auto.getMarca()) != null){
-                    
+                auto.setPrecioPatente(lineaArchivo.split(";")[9]);
+                auto.setTasacionFiscal(lineaArchivo.split(";")[10]);
+                
+                //Marca
+                if(mapMarca.getOrDefault(auto.getMarca(), null)==null){
+                    ArrayList nueva = new ArrayList();
+                    nueva.add(auto);
+                    mapMarca.putIfAbsent(auto.getMarca(), nueva);
                 }else{
-                    ArrayList listMarca = new ArrayList();
-                    listMarca.add(auto);
+                    ArrayList posicion = (ArrayList)mapMarca.get(auto.getMarca());
+                    posicion.add(auto);
                 }
-                mapMarca.put(auto.getMarca(), auto);
-                mapTipo.put(auto.getType(), auto);
-                mapModelo.put(auto.getModelo(), auto);
-                mapCodigoUnico.put(auto.getCodigoUnico(), auto);
-                treeMapYear.put(auto.getYear(), auto);
-                treeMapPrecioPatente.put((int)auto.getPrecioPatente(), auto);
-                treeMapTasacion.put(auto.getTasacionFiscal(), auto);
+                
+                //Modelo
+                if(mapModelo.getOrDefault(auto.getModelo(), null)==null){
+                    ArrayList nueva = new ArrayList();
+                    nueva.add(auto);
+                    mapModelo.putIfAbsent(auto.getModelo(), nueva);
+                }else{
+                    ArrayList posicion = (ArrayList)mapModelo.get(auto.getModelo());
+                    posicion.add(auto);
+                }
+                
+                //Tipo
+                if(mapTipo.getOrDefault(auto.getType(), null)==null){
+                    ArrayList nueva = new ArrayList();
+                    nueva.add(auto);
+                    mapTipo.putIfAbsent(auto.getType(), nueva);
+                }else{
+                    ArrayList posicion = (ArrayList)mapTipo.get(auto.getType());
+                    posicion.add(auto);
+                }
+                
+                //Codigo unico
+                if(mapCodigoUnico.getOrDefault(auto.getCodigoUnico(), null)==null){
+                    ArrayList nueva = new ArrayList();
+                    nueva.add(auto);
+                    mapCodigoUnico.putIfAbsent(auto.getCodigoUnico(), nueva);
+                }else{
+                    ArrayList posicion = (ArrayList)mapCodigoUnico.get(auto.getCodigoUnico());
+                    posicion.add(auto);
+                }
         }
-        
         }catch(FileNotFoundException e){
             System.out.println("te echaste el ramo");
         }
