@@ -23,7 +23,7 @@ public class infoEmpresa {
         
     }
     public void crearUsuario(String name,String pw,boolean admin){//se encarga Usuario
-        boolean resultado = this.listaUsuarios.agregarUsuario(name,pw,admin);
+        this.listaUsuarios.agregarUsuario(name,pw,admin);
     }
     public void eliminarUsuario(){//se encarga ListaDeUsuarios
         

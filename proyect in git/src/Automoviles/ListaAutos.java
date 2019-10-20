@@ -13,13 +13,13 @@ import java.util.*;
 public class ListaAutos {
     private ArrayList<Auto> listaAuto;
     
-    private HashMap<String,Auto> mapMarca;
-    private HashMap<String,Auto> mapTipo;
-    private HashMap<String,Auto> mapModelo;
-    private HashMap<String,Auto> mapCodigoUnico;
-    private TreeMap<String,Auto> treeMapYear;
-    private TreeMap<String,Auto> treeMapPrecioPatente;
-    private TreeMap<String,Auto> treeMapPrecioVehiculo;
+    private final HashMap<String,ArrayList<Auto>> mapMarca = new HashMap();
+    private final HashMap<String,ArrayList<Auto>> mapTipo = new HashMap();
+    private final HashMap<String,ArrayList<Auto>> mapModelo = new HashMap();
+    private final HashMap<String,ArrayList<Auto>> mapCodigoUnico = new HashMap();
+    private final TreeMap<String,ArrayList<Auto>> treeMapYear = new TreeMap();
+    private final TreeMap<String,ArrayList<Auto>> treeMapPrecioPatente= new TreeMap();
+    private final TreeMap<String,ArrayList<Auto>> treeMapTasacion = new TreeMap();
     
 
     public void agregarAuto(){
@@ -34,12 +34,14 @@ public class ListaAutos {
     public void cargarDatos() throws IOException{
         //push arrayList & mapas
         String lineaArchivo;
-        int i = 1;
         try{
             File archivo = new File("src\\Automoviles\\basededatos.csv");
             BufferedReader bufferedLectura = new BufferedReader(new FileReader(archivo));
+            
             while((lineaArchivo = bufferedLectura.readLine()) != null){
                 Auto auto = new Auto();
+                ArrayList<Auto> lista = new ArrayList();
+                
                 auto.setCodigoUnico(lineaArchivo.split(";")[0]);
                 auto.setYear(Integer.parseInt(lineaArchivo.split(";")[1]));
                 auto.setType(lineaArchivo.split(";")[2]);
@@ -51,8 +53,19 @@ public class ListaAutos {
                 auto.setTransmision(lineaArchivo.split(";")[8]);
                 auto.setPrecioPatente(Integer.parseInt(lineaArchivo.split(";")[9]));
                 auto.setTasacionFiscal(Integer.parseInt(lineaArchivo.split(";")[10]));
-                //System.out.println(i+".-"+auto.getMarca()+" "+auto.getModelo()+" "+auto.getYear());
-                i++;
+                if(mapMarca.get(auto.getMarca()) != null){
+                    
+                }else{
+                    ArrayList listMarca = new ArrayList();
+                    listMarca.add(auto);
+                }
+                mapMarca.put(auto.getMarca(), auto);
+                mapTipo.put(auto.getType(), auto);
+                mapModelo.put(auto.getModelo(), auto);
+                mapCodigoUnico.put(auto.getCodigoUnico(), auto);
+                treeMapYear.put(auto.getYear(), auto);
+                treeMapPrecioPatente.put((int)auto.getPrecioPatente(), auto);
+                treeMapTasacion.put((auto.getTasacionFiscal(), auto);
         }
         
         }catch(FileNotFoundException e){
