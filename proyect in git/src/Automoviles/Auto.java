@@ -22,7 +22,7 @@ public class Auto {
     public Auto() {
     }
 
-    public Auto(String codigoUnico, String year, String type, String marca, String modelo, String version,String puertas, String combustible, String transmision,String precioPatente,String tasacionFiscal) {
+    public Auto(String codigoUnico, String year, String type, String marca, String modelo, String version,String puertas, String combustible, String transmision,String tasacionFiscal,String precioPatente) {
         this.codigoUnico = codigoUnico;
         this.year = year;
         this.type = type;
@@ -32,36 +32,36 @@ public class Auto {
         this.puertas = puertas;
         this.combustible = combustible;
         this.transmision = transmision;
-        this.precioPatente = precioPatente;
         this.tasacionFiscal = tasacionFiscal;
+        this.precioPatente = precioPatente;
     }
 
     public String getCodigoUnico() {
-        return codigoUnico;
+        return this.codigoUnico;
     }
 
     public String getYear() {
-        return year;
+        return this.year;
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public String getMarca() {
-        return marca;
+        return this.marca;
     }
 
     public String getModelo() {
-        return modelo;
+        return this.modelo;
     }
 
     public String getVersion() {
-        return version;
+        return this.version;
     }
 
     public String getPuertas() {
-        return puertas;
+        return this.puertas;
     }
 
     public String getCombustible() {
@@ -69,15 +69,15 @@ public class Auto {
     }
 
     public String getTransmision() {
-        return transmision;
+        return this.transmision;
     }
 
     public String getPrecioPatente() {
-        return precioPatente;
+        return this.precioPatente;
     }
 
     public String getTasacionFiscal() {
-        return tasacionFiscal;
+        return this.tasacionFiscal;
     }
 
     public void setCodigoUnico(String codigoUnico) {
@@ -120,7 +120,7 @@ public class Auto {
         this.precioPatente = precioPatente;
     }
 
-    public void setTasacionFiscal(String tasacifonFiscal) {
+    public void setTasacionFiscal(String tasacionFiscal) {
         this.tasacionFiscal = tasacionFiscal;
     }
 

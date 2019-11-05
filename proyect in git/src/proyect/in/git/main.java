@@ -15,11 +15,11 @@ import InterfazGrafica.*;
 public class main{
     
     public static void main(String[] args) throws IOException {
-        infoEmpresa BuscAuto = new infoEmpresa();
-        BuscAuto.cargarDatos();
-        //BuscAuto.mostrarPorMarca("NISSAN");
+       /* infoEmpresa BuscAuto = new infoEmpresa();
+        BuscAuto.cargarDatos();*/
         
-        
+        ListaAutos listaAuto = new ListaAutos();
+        listaAuto.cargarDatos();
         ListaDeUsuarios oli = new ListaDeUsuarios();
         InterfazGrafica.Owo.main(args);
     }

@@ -5,6 +5,7 @@
  */
 package Login;
 
+import Automoviles.Auto;
 import Login.ListaFavoritos;
 import java.util.ArrayList;
 
@@ -67,10 +68,14 @@ public class Usuario {
         this.name = null;
         this.password = null;
     }
-    public void eliminarAutoDeFavoritos(){
+    
+    public boolean eliminarAutoDeFavoritos(String nombreAuto){
+        
+        
+        return true;
     }   
-    public ListaFavoritos getListaFavoritos() {
-        return this.listaFavoritos;
+    public ArrayList<Auto> getListaFavoritos() {
+        return this.listaFavoritos.getListaFavoritos();
     }
     
     
