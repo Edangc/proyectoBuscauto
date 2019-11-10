@@ -2,8 +2,8 @@
 package Login;
 
 import Automoviles.Auto;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.io.*;
+import java.util.*;
 
 //hola
 
@@ -40,12 +40,16 @@ public class ListaDeUsuarios {
 
 
     public boolean agregarAutoAListaFavDelUsuario(Usuario user , Auto auto){ //se encarga ListaFavoritos
-        if(this.buscarUsuario(user))
+        Usuario usuarioEncontado = this.mapaUsuarios.get(user.getName());
+        if(usuarioEncontado != null){
+            return usuarioEncontado.agregarAutoAListaFavDelUsuario(auto);
+        }
+        return false;
     }
-    public boolean quitarAutoDeListaFavDelUsuario(String nombreUsuario, String nombreAuto){ //se encarga ListaFavoritos
-        Usuario verificador = this.buscarUsuario(nombreUsuario);
-        if(verificador == null) return false;
-        return verificador.eliminarAutoDeFavoritos(nombreAuto);
+    public boolean quitarAutoDeListaFavDelUsuario(Usuario usuario, Auto auto){ //se encarga ListaFavoritos
+        Usuario usuarioEncontado = this.buscarUsuario(usuario.getName());
+        if(usuarioEncontado == null) return false;
+        return usuarioEncontado.quitarAutoDeListaFavDelUsuario(auto);
         
     }
     /**
@@ -62,6 +66,19 @@ public class ListaDeUsuarios {
         return this.buscarUsuario(nombreUsuario).getListaFavoritos();
     }
     
+    public boolean verificarUsuario(String nameUser,String passwordUser) throws IOException{
+        try{
+            File archivo = new File("src\\Login\\usuarios.csv");
+            BufferedReader bufferedLectura = new BufferedReader(new FileReader(archivo));            
+            while(bufferedLectura.readLine() != null){
+            
+            }
+            
+            return true;
+        }catch(FileNotFoundException e){
+            return false;
+        }
+    }
     
     
 }

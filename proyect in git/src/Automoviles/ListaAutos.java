@@ -101,7 +101,7 @@ public class ListaAutos {
         }
     }
     
-    public void cargarDatos() throws IOException{
+    public boolean cargarDatos() throws IOException{
         //push arrayList & mapas
         String lineaArchivo;
         try{
@@ -191,9 +191,10 @@ public class ListaAutos {
                     ArrayList posicion = (ArrayList)sortedMapTasacion.get(auto.getTasacionFiscal());
                     posicion.add(auto);
                 }
-        }
+            }
+            return true;
         }catch(FileNotFoundException e){
-            System.out.println("te echaste el ramo");
+            return false;
         }
         
     }

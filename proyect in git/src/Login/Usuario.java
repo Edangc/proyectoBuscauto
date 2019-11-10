@@ -69,14 +69,17 @@ public class Usuario {
         this.password = null;
     }
     
-    public boolean eliminarAutoDeFavoritos(String nombreAuto){
-        
-        
-        return true;
+    public boolean quitarAutoDeListaFavDelUsuario(Auto auto){
+        return this.listaFavoritos.eliminarAutoDeFavoritos(auto);
     }   
+    
+    public boolean agregarAutoAListaFavDelUsuario(Auto auto){
+        return this.listaFavoritos.agregarAutoAListaFavDelUsuario(auto);
+    }
+        
     public ArrayList<Auto> getListaFavoritos() {
         return this.listaFavoritos.getListaFavoritos();
     }
     
-    
+
 }

@@ -4,6 +4,7 @@ package proyect.in.git;
 import Automoviles.Auto;
 import Login.ListaDeUsuarios;
 import Automoviles.ListaAutos;
+import Login.Usuario;
 import java.io.*;
 
 /**
@@ -28,12 +29,12 @@ public class infoEmpresa {
     public boolean eliminarUsuario(String name){//se encarga ListaDeUsuarios 
         return this.listaUsuarios.eliminarUsuario(name);
     }
-    public boolean agregarAutoAListaFavDelUsuario(String user, Auto auto){//se encarga ListaFavoritos
+    public boolean agregarAutoAListaFavDelUsuario(Usuario user, Auto auto){//se encarga ListaFavoritos
         return this.listaUsuarios.agregarAutoAListaFavDelUsuario(user, auto);
     }
            
-    public void quitarAutoDeListaFavDelUsuario(){//se encarga ListaFavoritos
-        
+    public boolean quitarAutoDeListaFavDelUsuario(Usuario user, Auto auto){//se encarga ListaFavoritos
+        return this.listaUsuarios.quitarAutoDeListaFavDelUsuario(user, auto);
     }
     public void crearAuto(){//se encarga Auto
     }
@@ -43,10 +44,6 @@ public class infoEmpresa {
     public void cargarDatos() throws IOException{
         listaAutos.cargarDatos();
     }    
-
-    public boolean validador(String f){
-        return true;
-    }
     
     public void mostrarPorMarca(String clave){
     

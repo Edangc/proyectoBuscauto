@@ -37,10 +37,42 @@ public class ListaFavoritos {
         
     }*/
     
-    public boolean agregarAutoAListaFavDelUsuario(){
-    
+    public boolean agregarAutoAListaFavDelUsuario(Auto auto){
+        int i = 0;
+        while(this.listaFavoritos.get(i)!=null){
+            if(this.esIgual(listaFavoritos.get(i), auto)){
+                return false;
+            }
+            i++;
+        }
+        return this.listaFavoritos.add(auto);
     }
     
+    public boolean quitarAutoDeListaFavDelUsuario(Auto auto){
+        int i = 0;
+        while(this.listaFavoritos.get(i)!=null){
+            if(this.esIgual(listaFavoritos.get(i), auto)){
+                return this.listaFavoritos.remove(listaFavoritos.get(i));
+            }
+            i++;
+        }
+        return false;
+    }
+    
+    public boolean esIgual(Auto auto1, Auto auto2){
+        if(auto1.getMarca().equals(auto2.getModelo())){
+            if(auto1.getModelo().equals(auto2.getModelo())){
+                if(auto1.getVersion().equals(auto2.getVersion())){
+                    if(auto1.getCombustible().equals(auto2.getCombustible())){
+                        if(auto1.getTransmision().equals(auto2.getTransmision())){
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
    /* public boolean verificador(String anualidadAuto, String marcaAuto, String versionAuto){
 
         if(this.listaFavoritos. == null) return false;
